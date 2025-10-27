@@ -2,8 +2,8 @@
         title: "1. Хоёр тооны их",
         inputs: ["a", "b"],
         code: (a, b) => {
-          if (a > b) return Их нь: ${a};
-          else if (b > a) return Их нь: ${b};
+          if (a > b) return Их нь: {a};
+          else if (b > a) return Их нь: {b};
           else return "Тэнцүү байна";
         }
       },
@@ -11,45 +11,45 @@
         title: "2. Хоёр тооны бага",
         inputs: ["a", "b"],
         code: (a, b) => {
-          if (a < b) return Бага нь: ${a};
-          else if (b < a) return Бага нь: ${b};
+          if (a < b) return Бага нь: {a};
+          else if (b < a) return Бага нь: {b};
           else return "Тэнцүү байна";
         }
       },
       {
         title: "3. Гурван тооны бага",
         inputs: ["a", "b", "c"],
-        code: (a, b, c) => Бага нь: ${Math.min(a, b, c)}
+        code: (a, b, c) => Бага нь: {Math.min(a, b, c)}
       },
       {
         title: "4. Гурван тооны их",
         inputs: ["a", "b", "c"],
-        code: (a, b, c) => Их нь: ${Math.max(a, b, c)}
+        code: (a, b, c) => Их нь: {Math.max(a, b, c)}
       },
       {
         title: "5. Гурван тооны дундах",
         inputs: ["a", "b", "c"],
         code: (a, b, c) => {
           const arr = [a, b, c].sort((x, y) => x - y);
-          return Дундах нь: ${arr[1]};
+          return Дундах нь: {arr[1]};
         }
       },
       {
         title: "6. Гурван тооны дундаж",
         inputs: ["a", "b", "c"],
-        code: (a, b, c) => Дундаж нь: ${(a + b + c) / 3}
+        code: (a, b, c) => Дундаж нь: {(a + b + c) / 3}
       },
       {
         title: "7. Эрэмбэ (хоёр тоо)",
         inputs: ["a", "b"],
-        code: (a, b) => a > b ? ${b}, ${a} : ${a}, ${b}
+        code: (a, b) => a > b ? {b}, {a} : {a}, {b}
       },
       {
         title: "8. Эрэмбэ 3 (гурван тоо)",
         inputs: ["a", "b", "c"],
         code: (a, b, c) => {
           const arr = [a, b, c].sort((x, y) => x - y);
-          return Өсөхөөр: ${arr.join(", ")};
+          return Өсөхөөр: {arr.join(", ")};
         }
       },
       {
